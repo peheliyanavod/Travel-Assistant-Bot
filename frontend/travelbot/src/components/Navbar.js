@@ -1,93 +1,70 @@
 import React from "react";
+import logo from "../Images/Logos/Travel_Assist_Logo.png";
 
 function Navbar() {
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            Navbar
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarColor02"
-            aria-controls="navbarColor02"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+    <nav
+      className="navbar navbar-expand-lg navbar-dark"
+      style={{ background: "linear-gradient(90deg, #0077b6, #00b4d8, #90e0ef)", marginBottom: '20px' }}
+    >
+      <div className="container-fluid">
+        <a className="navbar-brand d-flex align-items-center fw-bold text-light" href="#">
+          <img
+            src={logo}
+            alt="Travel Assist Logo"
+            width="50"
+            height="50"
+            className="d-inline-block align-text-top me-2 rounded-circle shadow"
+          />
+          Travel Assist
+        </a>
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor02"
+          aria-controls="navbarColor02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarColor02">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <a className="nav-link text-light fw-semibold" href="#">
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light fw-semibold" href="#">
+                Destinations
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light fw-semibold" href="#">
+                Packages
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light fw-semibold" href="#">
+                Travel Tips
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-light fw-semibold" href="#">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+          <button className="btn btn-light ms-lg-3 px-4 fw-bold rounded-pill">
+            Plan Your Trip
           </button>
-          <div class="collapse navbar-collapse" id="navbarColor02">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  Home
-                  <span class="visually-hidden">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Features
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Pricing
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  About
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">
-                    Action
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Another action
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">
-                    Separated link
-                  </a>
-                </div>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input
-                class="form-control me-sm-2"
-                type="search"
-                placeholder="Search"
-              />
-              <button
-                class="btn btn-secondary my-2 my-sm-0"
-                type="submit"
-                fdprocessedid="dbccv7"
-              >
-                Search
-              </button>
-            </form>
-          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }
 
