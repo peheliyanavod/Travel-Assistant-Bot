@@ -1,14 +1,28 @@
 import React from "react";
 import logo from "../Images/Logos/Travel_Assist_Logo.png";
+import { Link } from "react-router-dom";
 
 function Navbar() {
+  const isLoggedIn = localStorage.getItem("userSession"); // mock session check
+
+  const handleLogout = () => {
+    localStorage.removeItem("userSession");
+    window.location.href = "/";
+  };
+
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark"
-      style={{ background: "linear-gradient(90deg, #0077b6, #00b4d8, #90e0ef)", marginBottom: '20px' }}
+      style={{
+        background: "linear-gradient(90deg, #0077b6, #00b4d8, #90e0ef)",
+        marginBottom: "20px",
+      }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand d-flex align-items-center fw-bold text-light" href="#">
+        <Link
+          className="navbar-brand d-flex align-items-center fw-bold text-light"
+          to="/"
+        >
           <img
             src={logo}
             alt="Travel Assist Logo"
@@ -17,7 +31,7 @@ function Navbar() {
             className="d-inline-block align-text-top me-2 rounded-circle shadow"
           />
           Travel Assist
-        </a>
+        </Link>
 
         <button
           className="navbar-toggler"
@@ -34,34 +48,58 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarColor02">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link text-light fw-semibold" href="#">
+              <Link className="nav-link text-light fw-semibold" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light fw-semibold" href="#">
+              <Link className="nav-link text-light fw-semibold" to="/destinations">
                 Destinations
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light fw-semibold" href="#">
+              <Link className="nav-link text-light fw-semibold" to="/packages">
                 Packages
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light fw-semibold" href="#">
+              <Link className="nav-link text-light fw-semibold" to="/tips">
                 Travel Tips
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light fw-semibold" href="#">
+              <Link className="nav-link text-light fw-semibold" to="/contact">
                 Contact Us
-              </a>
+              </Link>
             </li>
+
+            {isLoggedIn ? (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link text-light fw-semibold" to="/profile">
+                    <i className="bi bi-person-circle me-1"></i> Profile
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <button
+                    className="btn btn-outline-light rounded-pill ms-3"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </button>
+                </li>
+              </>
+            ) : (
+              <li className="nav-item">
+                <Link
+                  to="/login"
+                  className="btn btn-light ms-lg-3 px-4 fw-bold rounded-pill"
+                >
+                  Login
+                </Link>
+              </li>
+            )}
           </ul>
-          <button className="btn btn-light ms-lg-3 px-4 fw-bold rounded-pill">
-            Plan Your Trip
-          </button>
         </div>
       </div>
     </nav>
