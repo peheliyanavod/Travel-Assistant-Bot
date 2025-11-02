@@ -3,7 +3,7 @@ import logo from "../Images/Logos/Travel_Assist_Logo.png";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const isLoggedIn = localStorage.getItem("userSession"); // mock session check
+  const isLoggedIn = localStorage.getItem("userSession");
 
   const handleLogout = () => {
     localStorage.removeItem("userSession");
@@ -53,7 +53,10 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light fw-semibold" to="/destinations">
+              <Link
+                className="nav-link text-light fw-semibold"
+                to="/destinations"
+              >
                 Destinations
               </Link>
             </li>
@@ -76,7 +79,10 @@ function Navbar() {
             {isLoggedIn ? (
               <>
                 <li className="nav-item">
-                  <Link className="nav-link text-light fw-semibold" to="/profile">
+                  <Link
+                    className="nav-link text-light fw-semibold"
+                    to="/profile"
+                  >
                     <i className="bi bi-person-circle me-1"></i> Profile
                   </Link>
                 </li>

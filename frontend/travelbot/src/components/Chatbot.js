@@ -28,8 +28,7 @@ function Chatbot() {
         ...prev,
         {
           sender: "bot",
-          text:
-            "Hello, I'm your Travel Assistant! How can I help you today?",
+          text: "Hello, I'm your Travel Assistant! How can I help you today?",
         },
       ]);
     }, 1000);

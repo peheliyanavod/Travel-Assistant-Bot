@@ -7,6 +7,8 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Chatbot from "./components/Chatbot";
+import PageNotFound from "./components/PageNotFound";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -15,10 +17,11 @@ function App() {
       <Container>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/chatbot" element={<Chatbot />} />
-          <Route path="*" element={<h2>404: Page Not Found</h2>} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Container>
       <Footer />
