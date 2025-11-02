@@ -1,5 +1,7 @@
 import React from "react";
 import { Carousel, Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 
 function Home() {
   return (
@@ -161,9 +163,11 @@ function Home() {
         <p className="lead mb-4">
           Plan your next unforgettable trip with Travel Assist — the smarter way to travel.
         </p>
-        <Button variant="light" size="lg" className="rounded-pill fw-bold px-4">
-          Plan My Trip
-        </Button>
+        <Link to="/chatbot">
+          <Button variant="light" size="lg" className="rounded-pill fw-bold px-4">
+            Plan My Trip
+          </Button>
+        </Link>
       </div>
     </div>
   );

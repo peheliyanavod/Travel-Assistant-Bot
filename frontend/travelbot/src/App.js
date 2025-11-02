@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Chatbot from "./components/Chatbot";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/chatbot" element={<Chatbot />} />
+          <Route path="*" element={<h2>404: Page Not Found</h2>} />
         </Routes>
       </Container>
       <Footer />
