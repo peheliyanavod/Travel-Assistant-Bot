@@ -6,8 +6,9 @@ function TravelPackages() {
     <div>
       <Container className="my-5 bg-light p-5 rounded-4">
         <h2 className="text-center fw-bold mb-4 text-primary">
-          Featured Packages in Sri Lanka
+          Featured Travel & Stay Packages in Sri Lanka
         </h2>
+
         <Row>
           {[
             {
@@ -32,8 +33,12 @@ function TravelPackages() {
                   <Card.Title className="fw-bold text-primary">
                     {pkg.title}
                   </Card.Title>
-                  <Card.Text>{pkg.days}</Card.Text>
                   <h4 className="text-success fw-bold">{pkg.price}</h4>
+                  <Card.Text>
+                    {pkg.days} <br />
+                    Includes hotel bookings, guided tours, and transfers.
+                  </Card.Text>
+
                   <Button
                     variant="outline-primary"
                     className="rounded-pill mt-3"

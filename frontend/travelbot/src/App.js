@@ -9,6 +9,7 @@ import Register from "./components/Register";
 import Chatbot from "./components/Chatbot";
 import PageNotFound from "./components/PageNotFound";
 import Contact from "./components/Contact";
+import Accommodations from "./components/Accommodations";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/accommodations" element={<Accommodations />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/chatbot" element={<Chatbot />} />

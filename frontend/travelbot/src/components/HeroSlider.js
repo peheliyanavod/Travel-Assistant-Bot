@@ -1,14 +1,15 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import Sigiriya from "../Images/Hero slider/Sigiriya.png";
-import Sigiriya_2 from "../Images/Hero slider/Sigiriya 2.png";
+// import Sigiriya_2 from "../Images/Hero slider/Sigiriya 2.png";
 import Nine_arch from "../Images/Hero slider/Ella nine arch.png";
-import Nine_arch_2 from "../Images/Hero slider/Ella nine arch 2.png";
+// import Nine_arch_2 from "../Images/Hero slider/Ella nine arch 2.png";
 import Unawatuna from "../Images/Hero slider/Unawatuna beach.png";
 import Elephants from "../Images/Hero slider/Elephants.jpg";
 import Port_city from "../Images/Hero slider/Port_City.jpg";
 import Temple from "../Images/Hero slider/Temple.jpg";
-import Galle_Fort from "../Images/Hero slider/Galle fort.png";
+import TempleOfTooth from "../Images/Hero slider/temple_of_tooth.png";
+// import Galle_Fort from "../Images/Hero slider/Galle fort.png";
 
 function HeroSlider() {
   return (
@@ -23,11 +24,12 @@ function HeroSlider() {
           />
           <Carousel.Caption>
             <h2 className="fw-bold text-light bg-dark bg-opacity-50 p-2 rounded">
-              Discover the Wonders of Sri Lanka
+              Discover the Iconic Sigiriya Rock Fortress
             </h2>
             <p className="lead">
-              From golden beaches to misty mountains — explore paradise island
-              with Travel Assist.
+              Climb the Lion Rock, admire ancient frescoes, and stay in scenic
+              resorts nearby - your royal adventure awaits with{" "}
+              <strong>Travel Assist</strong>.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -41,11 +43,11 @@ function HeroSlider() {
           />
           <Carousel.Caption>
             <h2 className="fw-bold text-light bg-dark bg-opacity-50 p-2 rounded">
-              Experience Nature & Culture
+              Journey Through the Misty Hills of Ella
             </h2>
             <p className="lead">
-              Discover tea gardens, ancient cities, and wildlife in every
-              corner.
+              Watch the trains pass over the famous Nine Arch Bridge and relax
+              in cozy hillside lodges surrounded by lush tea gardens.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -59,10 +61,11 @@ function HeroSlider() {
           />
           <Carousel.Caption>
             <h2 className="fw-bold text-light bg-dark bg-opacity-50 p-2 rounded">
-              Your Journey Starts Here
+              Escape to the Golden Shores of Unawatuna
             </h2>
             <p className="lead">
-              Let Travel Assist plan your perfect Sri Lankan getaway.
+              Sun, sand, and serenity - unwind at beachside villas and enjoy the
+              vibrant coastal life with <strong>Travel Assist</strong>.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -71,15 +74,16 @@ function HeroSlider() {
           <img
             className="d-block w-100"
             src={Elephants}
-            alt="Elephants"
+            alt="Sri Lankan Elephants"
             style={{ height: "80vh", objectFit: "cover" }}
           />
           <Carousel.Caption>
             <h2 className="fw-bold text-light bg-dark bg-opacity-50 p-2 rounded">
-              Your Journey Starts Here
+              Witness the Majestic Giants of Sri Lanka
             </h2>
             <p className="lead">
-              Let Travel Assist plan your perfect Sri Lankan getaway.
+              Experience unforgettable wildlife safaris and get closer to nature
+              at Yala and Minneriya National Parks.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -88,15 +92,16 @@ function HeroSlider() {
           <img
             className="d-block w-100"
             src={Port_city}
-            alt="Port City"
+            alt="Port City Colombo"
             style={{ height: "80vh", objectFit: "cover" }}
           />
           <Carousel.Caption>
             <h2 className="fw-bold text-light bg-dark bg-opacity-50 p-2 rounded">
-              Your Journey Starts Here
+              Discover the Modern Charm of Colombo
             </h2>
             <p className="lead">
-              Let Travel Assist plan your perfect Sri Lankan getaway.
+              From luxury hotels to oceanfront dining - explore Sri Lanka’s
+              thriving capital with ease through <strong>Travel Assist</strong>.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -104,16 +109,17 @@ function HeroSlider() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src={Temple}
-            alt="Temple"
+            src={TempleOfTooth}
+            alt="Temple of the Tooth, Kandy"
             style={{ height: "80vh", objectFit: "cover" }}
           />
           <Carousel.Caption>
             <h2 className="fw-bold text-light bg-dark bg-opacity-50 p-2 rounded">
-              Your Journey Starts Here
+              Explore the Sacred City of Kandy
             </h2>
             <p className="lead">
-              Let Travel Assist plan your perfect Sri Lankan getaway.
+              Visit the world-famous Temple of the Tooth and immerse yourself in
+              Sri Lanka’s rich cultural heritage.
             </p>
           </Carousel.Caption>
         </Carousel.Item>

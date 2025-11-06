@@ -11,15 +11,15 @@ function Action() {
           background: "linear-gradient(90deg, #0077b6, #00b4d8)",
         }}
       >
-        <h2 className="fw-bold mb-3">Plan Your Dream Sri Lankan Adventure!</h2>
+        <h2 className="fw-bold mb-3">Select Your Dream Sri Lankan Stay Today!</h2>
         <p className="lead mb-4">
-          Discover the best of Sri Lanka with Travel Assist — your trusted local
-          travel planner.
+          Discover hand-picked hotels, scenic resorts, and cozy retreats - all
+          available with instant booking on <strong>Travel Assist</strong>.
         </p>
         <Link to="/chatbot">
           <Button
             variant="light"
-            size="lg"
+            size="md"
             className="rounded-pill fw-bold px-4"
           >
             Start Planning

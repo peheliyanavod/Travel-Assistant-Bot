@@ -66,8 +66,11 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light fw-semibold" to="/tips">
-                Travel Tips
+              <Link
+                className="nav-link text-light fw-semibold"
+                to="/accommodations"
+              >
+                Accommodations
               </Link>
             </li>
             <li className="nav-item">

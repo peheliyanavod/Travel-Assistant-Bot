@@ -19,16 +19,24 @@ function Services() {
             <h5 className="mt-3 fw-semibold">Affordable Packages</h5>
             <p>Best local deals tailored to your budget and preferences.</p>
           </Col>
-          <Col md={3}>
+          {/* <Col md={3}>
             <i className="bi bi-shield-check fs-1 text-primary"></i>
             <h5 className="mt-3 fw-semibold">Safe & Reliable</h5>
             <p>Travel confidently with verified accommodations and guides.</p>
-          </Col>
+          </Col> */}
           <Col md={3}>
             <i className="bi bi-headset fs-1 text-primary"></i>
             <h5 className="mt-3 fw-semibold">24/7 Support</h5>
             <p>
-              Always ready to assist you — before, during, and after your trip.
+              Always ready to assist you - before, during, and after your trip.
+            </p>
+          </Col>
+          <Col md={3}>
+            <i className="bi bi-house-heart fs-1 text-primary"></i>
+            <h5 className="mt-3 fw-semibold">Hotel Booking Made Easy</h5>
+            <p>
+              Compare and book verified accommodations - from luxury resorts to
+              budget stays - all in one platform.
             </p>
           </Col>
         </Row>
