@@ -7,7 +7,7 @@ import Nine_arch from "../Images/Hero slider/Ella nine arch.png";
 import Unawatuna from "../Images/Hero slider/Unawatuna beach.png";
 import Elephants from "../Images/Hero slider/Elephants.jpg";
 import Port_city from "../Images/Hero slider/Port_City.jpg";
-import Temple from "../Images/Hero slider/Temple.jpg";
+// import Temple from "../Images/Hero slider/Temple.jpg";
 import TempleOfTooth from "../Images/Hero slider/temple_of_tooth.png";
 // import Galle_Fort from "../Images/Hero slider/Galle fort.png";
 
