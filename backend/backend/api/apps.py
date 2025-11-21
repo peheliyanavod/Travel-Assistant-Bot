@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class TravelAssistAppConfig(AppConfig):
+class ApiConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'travel_assist_app'
+    name = 'api'
