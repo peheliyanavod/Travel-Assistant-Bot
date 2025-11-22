@@ -1,20 +1,28 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import api from "../api";
+import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 
 function Login() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    // mock validation
-    if (email === "user@example.com" && password === "password") {
-      localStorage.setItem("userSession", "true");
+    try {
+      const res = await api.post("api/token/", {
+        username: username,
+        password: password,
+      });
+
+      localStorage.setItem(ACCESS_TOKEN, res.data.access);
+      localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
+
       navigate("/");
-    } else {
-      alert("Invalid email or password");
+    } catch (error) {
+      alert("Invalid username or password");
     }
   };
 
@@ -27,16 +35,16 @@ function Login() {
       }}
     >
       <div className="card shadow-lg p-5 rounded-4" style={{ maxWidth: "400px", width: "90%" }}>
-        <h3 className="text-center mb-4 fw-bold text-primary">Login to Travel Assist</h3>
+        <h3 className="text-center mb-4 fw-bold text-primary">Login</h3>
         <form onSubmit={handleLogin}>
           <div className="mb-3">
-            <label className="form-label fw-semibold">Email</label>
+            <label className="form-label fw-semibold">Username</label>
             <input
-              type="email"
+              type="text"
               className="form-control rounded-pill px-3"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Enter your username"
               required
             />
           </div>

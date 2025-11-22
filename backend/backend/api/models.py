@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class TravelData(models.Model):
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     destination = models.CharField(max_length=255)

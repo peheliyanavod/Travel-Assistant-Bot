@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import api from "../api";
 
 function Register() {
   const navigate = useNavigate();
   const [user, setUser] = useState({ name: "", email: "", password: "" });
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
-
-    if (user.email && user.password) {
-      localStorage.setItem("userSession", "true");
-      navigate("/");
+    try {
+      await api.post("api/user/register/", 
+        {
+          username: user.name,
+          password: user.password,
+        }
+      );
+      navigate("/login");
+    } catch (e) {
+      alert("Registration failed");
     }
   };
 
@@ -22,8 +29,13 @@ function Register() {
         background: "linear-gradient(135deg, #90e0ef, #00b4d8, #0077b6)",
       }}
     >
-      <div className="card shadow-lg p-5 rounded-4" style={{ maxWidth: "400px", width: "90%" }}>
-        <h3 className="text-center mb-4 fw-bold text-primary">Create an Account</h3>
+      <div
+        className="card shadow-lg p-5 rounded-4"
+        style={{ maxWidth: "400px", width: "90%" }}
+      >
+        <h3 className="text-center mb-4 fw-bold text-primary">
+          Create an Account
+        </h3>
         <form onSubmit={handleRegister}>
           <div className="mb-3">
             <label className="form-label fw-semibold">Full Name</label>
@@ -58,7 +70,10 @@ function Register() {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary w-100 rounded-pill fw-bold">
+          <button
+            type="submit"
+            className="btn btn-primary w-100 rounded-pill fw-bold"
+          >
             Register
           </button>
         </form>
@@ -66,7 +81,10 @@ function Register() {
         <div className="text-center mt-3">
           <p>
             Already have an account?{" "}
-            <Link to="/login" className="text-decoration-none text-primary fw-bold">
+            <Link
+              to="/login"
+              className="text-decoration-none text-primary fw-bold"
+            >
               Login
             </Link>
           </p>
